@@ -4,17 +4,17 @@ import AboutMe from './components/AboutMe';
 import WorkExperience from './components/WorkExperience';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
-import { ChakraProvider } from '@chakra-ui/react'
-import DarkModeButton from './components/DarkModeButton';
-import Switch from '@mui/material/Switch';
-import { FormControlLabel } from '@mui/material';
+import DarkModeToggle from './components/DarkModeToggle';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleDarkMode, selectDarkMode } from './features/themeSlice';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false); // starts in light mode
+  const darkMode = useSelector(selectDarkMode);
+  const dispatch = useDispatch();
 
-  const toggleDarkMode = () => {
-    setDarkMode(prevMode => !prevMode);
-  };
+  // const toggleDarkMode = () => {
+  //   setDarkMode(prevMode => !prevMode);
+  // };
 
   return (
 
@@ -24,30 +24,19 @@ function App() {
           <nav>
             <Link to="/">Work Experience</Link> |
             <Link to="/about">About Me</Link>
-            {/* <button onClick={toggleDarkMode}>
-              {darkMode ? 'Light Mode' : 'Dark Mode'}
-            </button> */}
-
-            {/* <DarkModeButton></DarkModeButton> */}
-
-            {/* TODO: Fix font of dark mode */}
-            <FormControlLabel
-              value="bottom"
-              control={<Switch onChange={toggleDarkMode} />}
-              label="Dark Mode"
-              labelPlacement="bottom"
-            />
+            
+            <DarkModeToggle/>
 
           </nav>
           <h1>Hello, I'm Adi.</h1>
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed once, initially
-              'Aspiring Full Stack Developer',
+              'I am an aspiring Full Stack Developer',
               1000,
-              'Basketball Fanatic',
+              'I am a Basketball Fanatic',
               1000,
-              'Upcoming Engineering Graduate',
+              'I am an upcoming Engineering Graduate',
               1000,
             ]}
             speed={50}
@@ -60,7 +49,7 @@ function App() {
 
         <div className="content">
           <Routes>
-            <Route path="/" element={<WorkExperience />} />
+            <Route path="/" element={<WorkExperience darkMode={darkMode} />} />
             <Route path="/about" element={<AboutMe />} />
           </Routes>
         </div>

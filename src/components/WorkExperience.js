@@ -1,14 +1,14 @@
 import React from 'react';
 import Experience from './Experience';
 
-function WorkExperience() {
+function WorkExperience({darkMode}) {
   return (
     <div>
       <h2>Work Experience</h2>
       <p>
         Your work experience content goes here...
       </p>
-      <Experience></Experience>
+      <Experience darkMode={darkMode}></Experience>
     </div>
   );
 }
