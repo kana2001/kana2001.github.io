@@ -1,0 +1,36 @@
+/* Toggle container */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+  }
+  
+  /* Icons for light and dark mode */
+  .toggle .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    transition: left 0.4s;
+  }
+  
+  /* Sun icon */
+  .toggle .sun {
+    left: 10px;
+  }
+  
+  /* Moon icon */
+  .toggle .moon {
+    left: 50px;
+  }
+  
+  /* Background color for dark mode */
+  .dark .toggle {
+    background-color: #444;
+  }
+  

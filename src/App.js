@@ -5,6 +5,7 @@ import WorkExperience from './components/WorkExperience';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
 import { ChakraProvider, Switch } from '@chakra-ui/react'
+import DarkModeButton from './components/DarkModeButton';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false); // starts in light mode
@@ -21,9 +22,10 @@ function App() {
           <nav>
             <Link to="/">Work Experience</Link> |
             <Link to="/about">About Me</Link>
-            <button onClick={toggleDarkMode}>
+            {/* <button onClick={toggleDarkMode}>
               {darkMode ? 'Light Mode' : 'Dark Mode'}
-            </button>
+            </button> */}
+            <DarkModeButton></DarkModeButton>
 
           </nav>
           <h1>Hello, I'm Adi.</h1>
