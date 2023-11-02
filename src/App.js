@@ -1,23 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import SocialProfileWithImage from './components/userProfile';
-import { ChakraProvider } from '@chakra-ui/react'
+import AboutMe from './components/AboutMe';
+import WorkExperience from './components/WorkExperience';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { TypeAnimation } from 'react-type-animation';
+import { ChakraProvider, Switch } from '@chakra-ui/react'
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false); // starts in light mode
+
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode);
+  };
+
   return (
-    <ChakraProvider>
-      <div className="App">
+
+    <Router>
+      <div className={`App ${darkMode ? 'dark' : 'light'}`}>
         <div className="header">
-          <h1>Your Name</h1>
-          <p>Web Developer | Designer | Enthusiast</p>
+          <nav>
+            <Link to="/">Work Experience</Link> |
+            <Link to="/about">About Me</Link>
+            <button onClick={toggleDarkMode}>
+              {darkMode ? 'Light Mode' : 'Dark Mode'}
+            </button>
+
+          </nav>
+          <h1>Hello, I'm Adi.</h1>
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed once, initially
+              'Aspiring Full Stack Developer',
+              1000,
+              'Basketball Fanatic',
+              1000,
+              'Upcoming Engineering Graduate',
+              1000,
+            ]}
+            speed={50}
+            style={{ fontSize: '2em' }}
+            repeat={Infinity}
+          />
+
+
         </div>
 
-        <SocialProfileWithImage></SocialProfileWithImage>
         <div className="content">
-          <h2>About Me</h2>
-          <p>
-            Hello! I'm Adi. I'm passionate about web development, design, and always eager to learn more and take on new challenges.
-          </p>
+          <Routes>
+            <Route path="/" element={<WorkExperience />} />
+            <Route path="/about" element={<AboutMe />} />
+          </Routes>
         </div>
 
         <div className="contact">
@@ -26,7 +58,8 @@ function App() {
           <p>LinkedIn: [Your LinkedIn Profile]</p>
         </div>
       </div>
-    </ChakraProvider>
+    </Router>
+
   );
 }
 
