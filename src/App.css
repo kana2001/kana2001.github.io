@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #282c34;
+  padding: 20px 0;
+  color: white;
+}
+
+.content {
+  padding: 50px 0;
+}
+
+.contact {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+}
