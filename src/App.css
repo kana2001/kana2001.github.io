@@ -63,10 +63,12 @@ body, html {
 
 .contact.dark a{
   color: white;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .contact.light a{
   color: black;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 nav {
@@ -78,6 +80,7 @@ nav a {
   color: black;
   margin: 0 10px;
   text-decoration: none;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 nav a:hover {
