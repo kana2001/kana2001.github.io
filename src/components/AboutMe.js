@@ -4,17 +4,20 @@ function AboutMe() {
   return (
     <div>
       <h2>About Me</h2>
-      <p>
-      I enjoy the pursuit of craft, solving complex problems, and mentoring others.
+      <div style={{maxWidth: '700px', margin: 'auto'}}> 
+        <p>
+        I'm driven by a passion for constant improvement, diving into complex challenges, and empowering my peers and mentors.
       </p>
 
-      <p>
-      I’m inquisitive by nature and love exploring this beautiful world. I also enjoy volunteering and meeting new people.
-      </p>
+        <p>
+          Innately curious, I'm drawn to the wonders that our vast planet offers. I cherish giving back to the community and forging new connections.
+        </p>
 
-      <p>
-      Outside of work I enjoy travel, hiking, photography, and longbow archery.
-      </p>
+        <p>
+        Away from the grind, my adventures involve exploring new places, running freely under the open sky, refining my basketball technique, consistently upping my weightlifting numbers, and savoring diverse culinary delights.
+        </p>
+      </div>
+
     </div>
   );
 }

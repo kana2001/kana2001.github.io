@@ -6,9 +6,8 @@ function WorkExperience({darkMode}) {
     <div>
       <h2>Work Experience</h2>
       <p>
-        Your work experience content goes here...
       </p>
-      <Experience darkMode={darkMode}></Experience>
+      <Experience></Experience>
     </div>
   );
 }

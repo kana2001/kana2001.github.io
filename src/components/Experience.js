@@ -1,102 +1,64 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import ericsson from '../icons/ericsson.png';
+import { useSelector } from 'react-redux';
+import { selectDarkMode } from '../features/themeSlice';
+import { WorkOutline } from '@mui/icons-material';
+
 
 function Experience() {
+    const darkMode = useSelector(selectDarkMode);
     return (
-        <VerticalTimeline>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                date="2011 - present"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                icon={<img src ={ericsson} width={40} height={40} alt="Ericsson"/>  }
-            >
-                <h3 className="vertical-timeline-element-title">Front-End Developer, Ericsson</h3>
-                <h4 className="vertical-timeline-element-subtitle">Ottawa, ON</h4>
-                <p>
-                    Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                date="2010 - 2011"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                //icon={<WorkIcon />}
-            >
-                <h3 className="vertical-timeline-element-title">Art Director</h3>
-                <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-                <p>
-                    Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                date="2008 - 2010"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                //icon={<WorkIcon />}
-            >
-                <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-                <p>
-                    User Experience, Visual Design
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                date="2006 - 2008"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                //icon={<WorkIcon />}
-            >
-                <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-                <p>
-                    User Experience, Visual Design
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--education"
-                date="April 2013"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                //icon={<SchoolIcon />}
-            >
-                <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-                <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-                <p>
-                    Strategy, Social Media
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--education"
-                date="November 2012"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                //icon={<SchoolIcon />}
-            >
-                <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-                <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-                <p>
-                    Creative Direction, User Experience, Visual Design
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--education"
-                date="2002 - 2006"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                //icon={<SchoolIcon />}
-            >
-                <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-                <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-                <p>
-                    Creative Direction, Visual Design
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-                //icon={<StarIcon />}
-            />
-        </VerticalTimeline>
+        <ReactVerticalTimelineComponent darkMode={darkMode} />
     )
+}
+
+const workExp = [
+    {
+        company: 'Ericsson',
+        position: 'Front End Developer',
+        description: 'WIP',
+        start: 'May 2022',
+        end: 'August 2023'
+    },
+    {
+        company: 'Canadian Radio-television and Telecommunications Commission',
+        position: 'Telecommunications (Data) Engineering Intern',
+        description: 'WIP',
+        start: 'May 2021',
+        end: 'August 2021'
+    },
+    {
+        company: 'Carleton University',
+        position: 'Teaching Assistant',
+        description: 'WIP',
+        start: 'September 2020',
+        end: 'April 2021'
+    },
+    
+]
+
+const ReactVerticalTimelineComponent = ({ darkMode }) => {
+
+
+    return <VerticalTimeline lineColor={darkMode ? 'white' : 'black'}>
+        {workExp.map(data => <VerticalElement data={data} darkMode={darkMode} />)}
+    </VerticalTimeline>
+}
+const VerticalElement = ({ data, darkMode }) => {
+    return <VerticalTimelineElement
+        className={`vertical-timeline-element--work ${darkMode ? 'dark' : 'light'}`}
+        contentStyle={{ background: darkMode ? 'grey' : '#D3D3D3', color: darkMode ? 'white' : 'black' }}
+        contentArrowStyle={{ borderRight: '7px solid ' }}
+        date={`${data.start} - ${data.end ? data.end : "present"}`}
+        iconStyle={{ background: darkMode ? 'grey' : '#D3D3D3', color: darkMode ? '#fff' : 'black' }}
+        style={{color: darkMode ? '#fff' : 'black'}}
+        icon={<WorkOutline />}
+    >
+        <h3 className="vertical-timeline-element-title">{data.position}</h3>
+        <h4 className="vertical-timeline-element-subtitle">{data.company}</h4>
+        <p>{data.description}</p>
+    </VerticalTimelineElement>
 }
 
 export default Experience;
