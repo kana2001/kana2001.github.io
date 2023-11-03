@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import AboutMe from './components/AboutMe';
 import WorkExperience from './components/WorkExperience';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
 import DarkModeToggle from './components/DarkModeToggle';
 import { useSelector } from 'react-redux';
