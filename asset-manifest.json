@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/personal-website/static/css/main.2e3a76f7.css",
-    "main.js": "/personal-website/static/js/main.f9b9204d.js",
+    "main.js": "/personal-website/static/js/main.cdda4e66.js",
     "static/js/787.5809834d.chunk.js": "/personal-website/static/js/787.5809834d.chunk.js",
     "static/media/ericsson.png": "/personal-website/static/media/ericsson.ddfe8bc8f83e2b28cefe.png",
     "index.html": "/personal-website/index.html",
     "main.2e3a76f7.css.map": "/personal-website/static/css/main.2e3a76f7.css.map",
-    "main.f9b9204d.js.map": "/personal-website/static/js/main.f9b9204d.js.map",
+    "main.cdda4e66.js.map": "/personal-website/static/js/main.cdda4e66.js.map",
     "787.5809834d.chunk.js.map": "/personal-website/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e3a76f7.css",
-    "static/js/main.f9b9204d.js"
+    "static/js/main.cdda4e66.js"
   ]
 }
