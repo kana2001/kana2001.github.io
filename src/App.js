@@ -30,9 +30,11 @@ function App() {
               // Same substring at the start will only be typed once, initially
               'I am a Developer',
               5000,
-              'I am a Basketball Fanatic',
+              'I create innovative solutions',
               5000,
-              'I am an upcoming Engineering Graduate',
+              'I build efficient, scalable code',
+              5000,
+              'I am a lifelong learner',
               5000,
             ]}
             speed={50}
@@ -52,7 +54,7 @@ function App() {
 
         <div className={`contact ${darkMode ? 'dark' : 'light'}`}>
           <h2>Contact Me</h2>
-          <a href="mailto:adiwiwekananda@gmail.com">Email</a>
+          <a href="mailto:adityakana@gmail.com">Email</a>
           <a href="https://www.linkedin.com/in/aditya-wiwekananda/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/kana2001" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href={`${process.env.PUBLIC_URL}/assets/resume.pdf`} target="_blank" rel="noopener noreferrer">Resume</a>

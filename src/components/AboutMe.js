@@ -10,11 +10,11 @@ function AboutMe() {
       </p>
 
         <p>
-          Innately curious, I'm drawn to the wonders that our vast planet offers. I cherish giving back to the community and forging new connections.
+          Innately curious, I cherish giving back to the community and forging new connections.
         </p>
 
         <p>
-        Away from the grind, my adventures involve exploring new places, running freely under the open sky, refining my basketball technique, consistently upping my weightlifting numbers, and savoring diverse culinary delights.
+        Away from the grind, I enjoy weightlifting, running, basketball.
         </p>
       </div>
 

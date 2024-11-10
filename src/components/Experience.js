@@ -17,25 +17,25 @@ const workExp = [
     {
         company: 'Ericsson',
         position: 'Front End Developer',
-        description: 'WIP',
+        description: `Spearheaded the development of the Ericsson Indoor Planner webapp using React with TypeScript, increasing type safety and reducing runtime errors. Collaborated with back-end developers to integrate RESTful APIs that fetch and display dynamic content, such as real-time data updates and user-generated content. Architected a centralized state management system using Redux, enhancing data handling and reducing prop drilling for complex application states.`,
         start: 'May 2022',
         end: 'August 2023'
     },
     {
         company: 'Canadian Radio-television and Telecommunications Commission',
         position: 'Telecommunications (Data) Engineering Intern',
-        description: 'WIP',
+        description: 'Developed Python scripts for data cleansing and transformation, and network packet analysis using TShark, enhancing data processing efficiency by 30% and improving network monitoring capabilities.',
         start: 'May 2021',
         end: 'August 2021'
     },
     {
         company: 'Carleton University',
         position: 'Teaching Assistant',
-        description: 'WIP',
+        description: 'Conducted weekly lab sessions that reinforced ECE course material (Linux, Python) through hands-on programming exercises, resulting in a 10% increase in average student project scores.',
         start: 'September 2020',
         end: 'April 2021'
     },
-    
+
 ]
 
 const ReactVerticalTimelineComponent = ({ darkMode }) => {
@@ -52,7 +52,7 @@ const VerticalElement = ({ data, darkMode }) => {
         contentArrowStyle={{ borderRight: '7px solid ' }}
         date={`${data.start} - ${data.end ? data.end : "present"}`}
         iconStyle={{ background: darkMode ? 'grey' : '#D3D3D3', color: darkMode ? '#fff' : 'black' }}
-        style={{color: darkMode ? '#fff' : 'black'}}
+        style={{ color: darkMode ? '#fff' : 'black' }}
         icon={<WorkOutline />}
     >
         <h3 className="vertical-timeline-element-title">{data.position}</h3>
