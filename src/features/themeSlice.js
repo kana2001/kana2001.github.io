@@ -5,7 +5,14 @@ import { createSlice } from '@reduxjs/toolkit';
 // Function to get the initial dark mode value from localStorage
 const getInitialDarkMode = () => {
   const storedDarkMode = localStorage.getItem('darkMode');
-  return storedDarkMode === 'true' ? true : false; // Default to light mode if no setting exists
+  if (storedDarkMode === 'true') {
+    return true;
+  } else if (storedDarkMode === 'false') {
+    return false;
+  } else {
+    // No preference in localStorage, check device preference
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
 };
 
 const themeSlice = createSlice({
