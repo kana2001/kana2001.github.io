@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.2e3a76f7.css",
-    "main.js": "/static/js/main.65997480.js",
+    "main.js": "/static/js/main.c59fa31a.js",
     "static/js/787.5809834d.chunk.js": "/static/js/787.5809834d.chunk.js",
     "static/media/ericsson.png": "/static/media/ericsson.ddfe8bc8f83e2b28cefe.png",
     "index.html": "/index.html",
     "main.2e3a76f7.css.map": "/static/css/main.2e3a76f7.css.map",
-    "main.65997480.js.map": "/static/js/main.65997480.js.map",
+    "main.c59fa31a.js.map": "/static/js/main.c59fa31a.js.map",
     "787.5809834d.chunk.js.map": "/static/js/787.5809834d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e3a76f7.css",
-    "static/js/main.65997480.js"
+    "static/js/main.c59fa31a.js"
   ]
 }
