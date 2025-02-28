@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import AboutMe from './components/AboutMe';
 import WorkExperience from './components/WorkExperience';
@@ -11,6 +11,13 @@ import { selectDarkMode } from './features/themeSlice';
 function App() {
   const darkMode = useSelector(selectDarkMode);
 
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
 
   return (
 

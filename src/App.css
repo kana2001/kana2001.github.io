@@ -3,6 +3,10 @@ body, html {
   margin: 0;
 }
 
+.dark body, .dark html {
+  background-color: #333333;
+}
+
 #root {
   display: flex;
   flex-direction: column;
