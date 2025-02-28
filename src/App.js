@@ -32,6 +32,7 @@ function App() {
 
           </nav>
           <h1>Hello, I'm Adi.</h1>
+          <span className="type-animation-container">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed once, initially
@@ -48,6 +49,7 @@ function App() {
             style={{ fontSize: '2em' }}
             repeat={Infinity}
           />
+          </span>
 
 
         </div>
