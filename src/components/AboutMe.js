@@ -4,7 +4,7 @@ function AboutMe() {
   return (
     <div>
       <h2>About Me</h2>
-      <div style={{maxWidth: '700px', margin: 'auto'}}> 
+      <div style={{maxWidth: '700px', margin: 'auto', paddingRight:'1em', paddingLeft:'1em'}}> 
         <p>
         I'm driven by a passion for constant improvement, diving into complex challenges, and empowering my peers and mentors.
       </p>
