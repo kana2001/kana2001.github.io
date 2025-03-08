@@ -46,7 +46,7 @@ function App() {
               5000,
             ]}
             speed={50}
-            style={{ fontSize: '2em' }}
+            style={{ fontSize: '1.5em' }}
             repeat={Infinity}
           />
           </span>
