@@ -66,7 +66,6 @@ function App() {
           <a href="mailto:adityakana@gmail.com">Email</a>
           <a href="https://www.linkedin.com/in/aditya-wiwekananda/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/kana2001" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href={`${process.env.PUBLIC_URL}/assets/resume.pdf`} target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
       </div>
     </Router>

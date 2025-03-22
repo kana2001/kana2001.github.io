@@ -17,7 +17,7 @@ const workExp = [
     {
         company: 'Ericsson',
         position: 'Front End Developer',
-        description: `Spearheaded the development of the Ericsson Indoor Planner webapp using React with TypeScript, increasing type safety and reducing runtime errors. Collaborated with back-end developers to integrate RESTful APIs that fetch and display dynamic content, such as real-time data updates and user-generated content. Architected a centralized state management system using Redux, enhancing data handling and reducing prop drilling for complex application states.`,
+        description: `Contributed to the development of the Ericsson Indoor Planner webapp using React with TypeScript, improving application performance and maintainability. Collaborated with back-end developers to integrate RESTful APIs that fetch and display dynamic content, such as real-time data updates and user-generated content. Architected a centralized state management system using Redux, enhancing data handling and reducing prop drilling for complex application states.`,
         start: 'May 2022',
         end: 'August 2023'
     },
@@ -55,8 +55,8 @@ const VerticalElement = ({ data, darkMode }) => {
         style={{ color: darkMode ? '#fff' : 'black' }}
         icon={<WorkOutline />}
     >
-        <h3 className="vertical-timeline-element-title">{data.position}</h3>
-        <h4 className="vertical-timeline-element-subtitle">{data.company}</h4>
+        <h3 className="vertical-timeline-element-title">{data.company}</h3>
+        <h4 className="vertical-timeline-element-subtitle">{data.position}</h4>
         <p>{data.description}</p>
     </VerticalTimelineElement>
 }
